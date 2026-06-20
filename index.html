@@ -452,6 +452,11 @@
       .content { padding: 0; }
       .view { display: block; page-break-after: always; }
       button { display: none; }
+	  /* Oculta la configuración técnica en la versión pública */
+#tab-info,
+#view-info {
+  display: none !important;
+}
     }
   </style>
 </head>
@@ -483,7 +488,7 @@
     <header class="header">
       <div>
         <div class="institution-chip">UdeA · Escuela de Idiomas · Grupo TNT</div>
-        <h1>Instrumento digital de producción textual docente</h1>
+        <h1>Actividad digital de producción escrita docente</h1>
         <p>Proyecto regional sobre caracterización de la producción escrita de docentes de educación básica y media en el Suroeste de Antioquia.</p>
       </div>
       <div class="controls">
@@ -494,10 +499,9 @@
     </header>
 
     <nav class="tabs" aria-label="Secciones de la aplicación">
-      <button class="tab active" id="tab-cover" type="button" onclick="showView('cover')">0. Portada</button>
-      <button class="tab" id="tab-consent" type="button" onclick="showView('consent')">1. Consentimiento</button>
-      <button class="tab" id="tab-instrument" type="button" onclick="showView('instrument')">2. Producción textual</button>
-      <button class="tab" id="tab-info" type="button" onclick="showView('info')">3. Configuración Google Sheets</button>
+      <button class="tab active" id="tab-cover" type="button" onclick="showView('cover')">1. Portada</button>
+      <button class="tab" id="tab-consent" type="button" onclick="showView('consent')">2. Consentimiento</button>
+      <button class="tab" id="tab-instrument" type="button" onclick="showView('instrument')">3. Producción textual</button>
     </nav>
 
     <main class="content">
@@ -506,7 +510,7 @@
         <div class="cover-hero">
           <div class="cover-title">
             <div class="institution-chip">Universidad de Antioquia · Escuela de Idiomas · Grupo TNT</div>
-            <h2>Caracterización de la producción escrita de una muestra de docentes de lenguaje de educación básica y media en la subregión Suroeste de Antioquia</h2>
+            <h2>Caracterización de la producción escrita de docentes de educación básica y media en la subregión Suroeste de Antioquia</h2>
             <p class="project-name">Este instrumento digital recoge consentimiento informado, variables sociodemográficas mínimas y una muestra de producción textual argumentativa. La información será tratada con criterios de confidencialidad, anonimización y uso exclusivamente académico y científico.</p>
             <div class="step-list">
               <div class="step-card"><strong>1. Consentimiento</strong><span>Lea y acepte voluntariamente la participación. El sistema generará un código anónimo.</span></div>
@@ -515,7 +519,6 @@
             </div>
             <div class="submit-row">
               <button class="btn-green" type="button" onclick="showView('consent')">Iniciar consentimiento</button>
-              <button class="btn-light" type="button" onclick="showView('info')">Ver configuración técnica</button>
             </div>
           </div>
           <div class="cover-logos" aria-label="Logos institucionales">
